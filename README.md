@@ -1,4 +1,4 @@
-# Astrium.js
+# Astrium.js Discord Librairy
 
 A modern, high-performance Discord library for JavaScript and TypeScript.
 
@@ -17,7 +17,7 @@ A modern, high-performance Discord library for JavaScript and TypeScript.
 
 ## Quick Start
 
-\`\`\`typescript
+```typescript
 import { AstriumClient, GatewayIntents, SlashCommandBuilder } from 'astrium.js'
 
 const client = new AstriumClient({
@@ -78,13 +78,13 @@ client.on('messageCreate', async (message) => {
 })
 
 client.connect()
-\`\`\`
+```
 
 ## Advanced Usage
 
 ### Caching with Redis
 
-\`\`\`typescript
+```typescript
 import Redis from 'ioredis'
 
 const redis = new Redis({
@@ -103,11 +103,11 @@ const client = new AstriumClient({
     }
   }
 })
-\`\`\`
+```
 
 ### Plugin Development
 
-\`\`\`typescript
+```typescript
 import { BasePlugin } from 'astrium.js'
 
 class MyPlugin extends BasePlugin {
@@ -135,11 +135,11 @@ class MyPlugin extends BasePlugin {
 
 // Load the plugin
 client.plugins.load(new MyPlugin())
-\`\`\`
+```
 
 ### Event Middleware
 
-\`\`\`typescript
+```typescript
 // Add logging middleware
 client.events.use(async (event, next) => {
   const start = Date.now()
@@ -153,17 +153,17 @@ client.events.use('messageCreate', async (event, next) => {
   if (event.data.author.bot) return // Skip bot messages
   await next()
 })
-\`\`\`
+```
 
 ## Installation
 
-\`\`\`bash
+```bash
 npm install astrium.js
 # or
 yarn add astrium.js
 # or
 pnpm add astrium.js
-\`\`\`
+```
 
 ### Dependencies
 
@@ -201,7 +201,7 @@ Optional dependencies:
 
 ### Client Options
 
-\`\`\`typescript
+```typescript
 interface AstriumClientOptions {
   token: string
   intents: GatewayIntents[]
@@ -214,14 +214,14 @@ interface AstriumClientOptions {
   ws?: WebSocketOptions
   commands?: CommandOptions
 }
-\`\`\`
+```
 
 ### Environment Variables
 
 Set your Discord bot token:
-\`\`\`bash
+```bash
 DISCORD_TOKEN=your_bot_token_here
-\`\`\`
+```
 
 ## Examples
 
@@ -260,25 +260,25 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ### Development Setup
 
-\`\`\`bash
-git clone https://github.com/astrium-js/astrium.js.git
-cd astrium.js
+```bash
+git clone https://github.com/astron-collection/astriumjs.git
+cd astriumjs
 npm install
 npm run build
 npm test
-\`\`\`
+```
+
+## Support
+
+- 📖 [Documentation](https://astriumjs.org) (coming soon)
+- 💬 [Discord Server](https://discord.gg/astrium) (coming soon)
+- 🐛 [Issue Tracker](https://github.com/astron-collection/astriumjs/issues)
+- 📧 [Email Support](mailto:support@astriumjs.org)
+
+---
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Support
-
-- 📖 [Documentation](https://astrium.js.org) (coming soon)
-- 💬 [Discord Server](https://discord.gg/astrium) (coming soon)
-- 🐛 [Issue Tracker](https://github.com/astrium-js/astrium.js/issues)
-- 📧 [Email Support](mailto:support@astrium.js.org)
-
----
 
 Made with ❤️ by the Astrium.js team
