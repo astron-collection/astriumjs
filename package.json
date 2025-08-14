@@ -1,0 +1,41 @@
+{
+  "name": "astrium.js",
+  "version": "0.1.0",
+  "description": "A modern, high-performance Discord library for JavaScript and TypeScript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts"
+  },
+  "keywords": ["discord", "bot", "api", "typescript", "javascript", "library", "astrium"],
+  "author": "Astrium Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/astrium/astrium.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/astrium/astrium.js/issues"
+  },
+  "homepage": "https://github.com/astrium/astrium.js#readme",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "ws": "^8.14.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
